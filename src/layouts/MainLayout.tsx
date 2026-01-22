@@ -17,7 +17,7 @@ export default function MainLayout() {
             {/* 3. CONTENIDO PRINCIPAL (OUTLET) */}
             {/* 'flex-grow': Obliga a este div a ocupar todo el espacio disponible,
                 empujando el Footer hacia el final de la pantalla si hay poco contenido. */}
-            <main className="flex-grow w-full flex flex-col">
+            <main className="grow w-full flex flex-col">
                 <Outlet />
             </main>
 

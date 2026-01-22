@@ -198,7 +198,7 @@ export default function HomeView() {
             </div>
 
             {/* Destacado */}
-            <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-blue-700 to-indigo-800 p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden group hover:shadow-blue-900/50 transition-all">
+            <div className="md:col-span-2 lg:col-span-2 bg-linear-to-br from-blue-700 to-indigo-800 p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden group hover:shadow-blue-900/50 transition-all">
               <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
                 <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                   <RocketLaunchIcon className="h-12 w-12 text-white" />
@@ -253,7 +253,7 @@ export default function HomeView() {
               href="https://www.instagram.com/corazondigital77/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-3 bg-gradient-to-tr from-[#f09433]/10 to-[#bc1888]/10 text-white rounded-full border border-pink-500/30 hover:from-[#f09433] hover:to-[#bc1888] hover:border-transparent transition-all duration-300 group"
+              className="flex items-center gap-3 px-6 py-3 bg-linear-to-tr from-[#f09433]/10 to-[#bc1888]/10 text-white rounded-full border border-pink-500/30 hover:from-[#f09433] hover:to-[#bc1888] hover:border-transparent transition-all duration-300 group"
             >
               <svg
                 className="w-5 h-5"
