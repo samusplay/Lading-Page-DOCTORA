@@ -58,7 +58,7 @@ export function FundamentoEducativa() {
 
     const prevSlide = () => setCurrentIndex(currentIndex === 0 ? presentaciones.length - 1 : currentIndex - 1);
     const nextSlide = () => setCurrentIndex(currentIndex === presentaciones.length - 1 ? 0 : currentIndex + 1);
-    const goToSlide = (slideIndex: number) => setCurrentIndex(slideIndex);
+    //const goToSlide = (slideIndex: number) => setCurrentIndex(slideIndex);
 
     return (
         <div className="w-full bg-slate-50 min-h-screen font-sans animate-fade-in pb-20">
