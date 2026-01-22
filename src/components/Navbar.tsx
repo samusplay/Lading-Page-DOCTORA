@@ -1,14 +1,13 @@
-
 import { useState } from "react";
-import { Link } from "react-router-dom"; // IMPORTANTE: Usamos Link en lugar de <a>
+import { Link } from "react-router-dom";
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     
-    // Lista de Materias (Exactamente como las tienes en tu Router)
     const materias = [
-        { name: "Aprendizaje Digital", path: "/aprendizaje-digital" },
-        { name: "Educación con TIC", path: "/educacionTic" },
+        { name: "Fundamentos de la investigacion", path: "/fundamento-educativa" },
+        { name: "Psicología Educativa", path: "/psicologia-educativa" },
+        { name: "Diseño Curricular", path: "/diseño-curricular" },
         { name: "Historia de la Educación", path: "/historiaEducacion" },
         { name: "Identidad del Maestro", path: "/identidad-maestro" },
         { name: "Tendencias Pedagógicas", path: "/tendencias-pedagogicas" },
@@ -19,13 +18,14 @@ export function Navbar() {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-20">
 
-                    {/* 1. LOGO (Vinculado a Inicio) */}
-                    <Link to="/" className="flex items-center gap-2 group">
-                        <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                            </svg>
-                        </div>
+                    {/* 1. LOGO (IMAGEN REAL CIRCULAR) */}
+                    <Link to="/" className="flex items-center gap-3 group">
+                        {/* Aquí está el cambio: Img en lugar de Svg */}
+                        <img 
+                            src="/logo4.jpeg" 
+                            alt="Logo Corazón Digital" 
+                            className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                        />
                         <span className="text-xl font-bold text-slate-800 tracking-tight">
                             Corazón <span className="text-blue-600">Digital</span>
                         </span>
@@ -39,7 +39,7 @@ export function Navbar() {
                             Inicio
                         </Link>
 
-                        {/* --- DROPDOWN DE MATERIAS (Solo CSS con 'group') --- */}
+                        {/* --- DROPDOWN DE MATERIAS --- */}
                         <div className="relative group h-20 flex items-center">
                             <button className="flex items-center gap-1 text-slate-600 font-medium hover:text-blue-600 transition-colors text-sm uppercase tracking-wide focus:outline-none">
                                 Materias
@@ -47,7 +47,7 @@ export function Navbar() {
                             </button>
                             
                             {/* Submenú Flotante */}
-                            <div className="absolute top-20 left-1/2 -translate-x-1/2 w-64 bg-white border border-slate-100 shadow-xl rounded-b-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top pt-2">
+                            <div className="absolute top-20 left-1/2 -translate-x-1/2 w-72 bg-white border border-slate-100 shadow-xl rounded-b-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top pt-2">
                                 <div className="py-2">
                                     {materias.map((materia) => (
                                         <Link 
@@ -86,7 +86,7 @@ export function Navbar() {
                 </div>
             </div>
 
-            {/* 4. MENÚ MÓVIL (Con las materias desplegadas) */}
+            {/* 4. MENÚ MÓVIL */}
             {isOpen && (
                 <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0 max-h-[80vh] overflow-y-auto">
                     <div className="px-4 pt-4 pb-6 space-y-2 flex flex-col">
@@ -94,7 +94,6 @@ export function Navbar() {
                             Inicio
                         </Link>
                         
-                        {/* Sección Materias en Móvil */}
                         <div className="bg-slate-50 rounded-xl p-4 space-y-2">
                             <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Materias Disponibles</p>
                             {materias.map((materia) => (

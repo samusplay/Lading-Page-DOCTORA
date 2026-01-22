@@ -13,24 +13,33 @@ import {
 export default function HomeView() {
   return (
     <div className="w-full bg-slate-50">
+      
       {/* 1. HERO SECTION: FONDO + LOGO + FRASE + PERFIL */}
       <section className="relative w-full min-h-screen flex flex-col pt-20 pb-12 border-b border-slate-200">
+        
         {/* --- FONDO --- */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: "url('/fondo.jpeg')" }}
         ></div>
+        
         {/* Gradiente para que el texto resalte sobre el dibujo */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-50/90 via-white/80 to-slate-50"></div>
+        <div className="absolute inset-0 z-0 bg-linear-to-b from-slate-50/90 via-white/80 to-slate-50"></div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-5xl mx-auto">
-            {/* --- A. LOGO --- */}
-            <div className="flex justify-center mb-6 animate-fade-in-down">
+            
+            {/* --- A. LOGO REDONDEADO --- */}
+            <div className="flex justify-center mb-8 animate-fade-in-down">
               <img
-                src="/logo.jpeg"
+                src="/logo4.jpeg"
                 alt="Logo Corazón Digital"
-                className="h-32 md:h-48 w-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                // CAMBIOS AQUÍ:
+                // 1. rounded-full: Lo hace circular.
+                // 2. h-32 w-32 / md:h-48 md:w-48: Fuerza dimensiones cuadradas para que el círculo sea perfecto.
+                // 3. object-cover: La imagen rellena el círculo.
+                // 4. border-4 border-white: Añade un marco blanco elegante.
+                className="h-32 w-32 md:h-48 md:w-48 object-cover rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-500"
               />
             </div>
 
@@ -60,7 +69,7 @@ export default function HomeView() {
                   </p>
                 </div>
                 <h3 className="font-bold text-slate-800 text-lg">
-                  Lic.Ciencias Sociales
+                  Lic. Ciencias Sociales
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
                   Universidad Distrital
@@ -78,7 +87,7 @@ export default function HomeView() {
                   </p>
                 </div>
                 <h3 className="font-bold text-slate-800 text-lg">
-                  Mg.Educación y Tecnología
+                  Mg. Educación y Tecnología
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
                   Universidad Distrital
@@ -96,10 +105,10 @@ export default function HomeView() {
                   </p>
                 </div>
                 <h3 className="font-bold text-slate-800 text-lg">
-                  Doctora en Educación{" "}
+                  Doctora en Educación
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
-                  Universidad Cuauhtémoc{" "}
+                  Universidad Cuauhtémoc
                 </p>
               </div>
             </div>
