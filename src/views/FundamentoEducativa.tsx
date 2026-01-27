@@ -3,20 +3,11 @@ import {
     ArrowLeftIcon,
     BeakerIcon,
     BookOpenIcon,
-    ChatBubbleLeftRightIcon,
-    CheckBadgeIcon,
     ChevronLeftIcon,
     ChevronRightIcon,
-    ClipboardDocumentCheckIcon,
     ClipboardDocumentListIcon,
-    ComputerDesktopIcon,
-    DocumentCheckIcon,
-    EyeIcon,
-    HeartIcon,
     MagnifyingGlassIcon,
-    PuzzlePieceIcon,
-    UserGroupIcon,
-    VideoCameraIcon
+    PuzzlePieceIcon
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -43,18 +34,6 @@ export function FundamentoEducativa() {
 
     const conceptos = ["Educación", "Pedagogía", "Enseñanza", "Aprendizaje", "Saber", "Escuela", "Currículo", "Didáctica", "Maestro"];
 
-    const acuerdos = [
-        { id: 1, text: "Registro de asistencia a AULAS VIRTUALES.", icon: <ClipboardDocumentCheckIcon className="h-5 w-5" /> },
-        { id: 2, text: "Lecturas asignadas para posterior evaluación.", icon: <BookOpenIcon className="h-5 w-5" /> },
-        { id: 3, text: "Entrega de evidencias en AULA VIRTUAL (PDF/Formato asignado).", icon: <DocumentCheckIcon className="h-5 w-5" /> },
-        { id: 4, text: "Actividades calificadas y publicadas en AULA VIRTUAL.", icon: <CheckBadgeIcon className="h-5 w-5" /> },
-        { id: 5, text: "Grupo de WhatsApp para material y recursos digitales.", icon: <ChatBubbleLeftRightIcon className="h-5 w-5" /> },
-        { id: 6, text: "Evaluaciones en formato FORMULARIO de Google.", icon: <ComputerDesktopIcon className="h-5 w-5" /> },
-        { id: 7, text: "Exposiciones prácticas sobre temáticas inclusivas.", icon: <UserGroupIcon className="h-5 w-5" /> },
-        { id: 8, text: "Realización de Wikis y grabaciones explicativas.", icon: <VideoCameraIcon className="h-5 w-5" /> },
-        { id: 9, text: "Resultados de procesos evaluativos públicos.", icon: <EyeIcon className="h-5 w-5" /> },
-        { id: 10, text: "Enfatizar en el amor y comprensión por los participantes.", icon: <HeartIcon className="h-5 w-5 text-pink-500" /> },
-    ];
 
     const prevSlide = () => setCurrentIndex(currentIndex === 0 ? presentaciones.length - 1 : currentIndex - 1);
     const nextSlide = () => setCurrentIndex(currentIndex === presentaciones.length - 1 ? 0 : currentIndex + 1);
@@ -83,7 +62,7 @@ export function FundamentoEducativa() {
                 <section className="mb-20">
                     <div className="flex items-center gap-3 mb-8">
                         <span className="bg-pink-100 text-pink-800 font-bold px-3 py-1 rounded-full text-xs uppercase">Multimedia</span>
-                        <h2 className="text-2xl font-bold text-slate-900">Material Interactivo</h2>
+                        
                     </div>
                     <div className="relative w-full group">
                         <div className="bg-white border border-slate-200 p-2 md:p-4 rounded-3xl shadow-xl overflow-hidden flex flex-col transition-all">
@@ -134,7 +113,7 @@ export function FundamentoEducativa() {
 
                     <div className="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden">
                         <PuzzlePieceIcon className="h-20 w-20 absolute -bottom-5 -right-5 opacity-10" />
-                        <h3 className="text-xl font-bold mb-6 text-cyan-400">3 & 4. La Propuesta de Investigación</h3>
+                        <h3 className="text-xl font-bold mb-6 text-cyan-400">La Propuesta de Investigación</h3>
                         <ul className="space-y-4 text-slate-300 text-sm">
                             <li className="flex gap-2"><span>•</span> Articulación con la observación educativa.</li>
                             <li className="flex gap-2"><span>•</span> Generación de ideas: ¿De dónde surgen?</li>
@@ -146,7 +125,7 @@ export function FundamentoEducativa() {
                 {/* 5. EL PROBLEMA DE INVESTIGACIÓN */}
                 <section className="mb-20 bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
                     <h3 className="text-2xl font-bold text-emerald-900 mb-8 flex items-center gap-2">
-                        <ClipboardDocumentListIcon className="h-7 w-7" /> 5 & 6. De la Realidad al Problema
+                        <ClipboardDocumentListIcon className="h-7 w-7" /> De la Realidad al Problema
                     </h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
@@ -181,23 +160,7 @@ export function FundamentoEducativa() {
                 </section>
 
                 {/* 7. ACUERDOS */}
-                <section className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
-                    <div className="text-center mb-10">
-                        <span className="bg-slate-900 text-white font-bold px-4 py-1.5 rounded-full text-xs tracking-wide uppercase">Normativa</span>
-                        <h2 className="text-3xl font-bold text-slate-900 mt-4">Acuerdos de Clase</h2>
-                        <p className="text-slate-500 mt-2">Pautas para el desarrollo armónico del curso</p>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-                        {acuerdos.map((acuerdo) => (
-                            <div key={acuerdo.id} className="flex items-start gap-4 group">
-                                <div className="p-2 bg-slate-50 rounded-lg text-slate-400 group-hover:text-cyan-600 group-hover:bg-cyan-50 transition-colors">
-                                    {acuerdo.icon}
-                                </div>
-                                <p className="text-sm text-slate-600 leading-snug pt-1">{acuerdo.text}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                
 
                 {/* CTA */}
                 <div className="mt-16 text-center">

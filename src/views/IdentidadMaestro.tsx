@@ -1,41 +1,18 @@
 import {
     ArrowLeftIcon,
-    BookOpenIcon,
-    ChatBubbleLeftRightIcon,
-    CheckBadgeIcon,
-    ClipboardDocumentCheckIcon,
     ClockIcon,
     ComputerDesktopIcon,
-    DocumentCheckIcon,
-    EyeIcon,
     GlobeAmericasIcon,
-    HeartIcon,
     MapPinIcon,
     PlayCircleIcon,
     PresentationChartLineIcon,
     PuzzlePieceIcon,
-    UserGroupIcon,
     UserIcon,
     VideoCameraIcon
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 export function IdentidadMaestro() {
-
-    // DATOS: Acuerdos de Clase
-    const acuerdos = [
-        { id: 1, text: "Registro de asistencia obligatorio en AULAS VIRTUALES.", icon: <ClipboardDocumentCheckIcon className="h-6 w-6 text-blue-500"/> },
-        { id: 2, text: "Lecturas asignadas fundamentales para posterior evaluación.", icon: <BookOpenIcon className="h-6 w-6 text-teal-500"/> },
-        { id: 3, text: "Evidencias en PDF o formato asignado subidas al AULA VIRTUAL.", icon: <DocumentCheckIcon className="h-6 w-6 text-indigo-500"/> },
-        { id: 4, text: "Calificación y retroalimentación publicada en AULA VIRTUAL.", icon: <CheckBadgeIcon className="h-6 w-6 text-green-500"/> },
-        { id: 5, text: "Grupo de WhatsApp para recursos: Podcast, Mapas, Jamboard, Miro, etc.", icon: <ChatBubbleLeftRightIcon className="h-6 w-6 text-emerald-500"/> },
-        { id: 6, text: "Evaluaciones mediante Formularios de Google.", icon: <ComputerDesktopIcon className="h-6 w-6 text-purple-500"/> },
-        { id: 7, text: "Exposiciones prácticas sobre temáticas inclusivas.", icon: <UserGroupIcon className="h-6 w-6 text-amber-500"/> },
-        { id: 8, text: "Creación de Wikis y grabación de explicaciones paso a paso.", icon: <VideoCameraIcon className="h-6 w-6 text-red-500"/> },
-        { id: 9, text: "Transparencia: Notas y resultados compartidos públicamente.", icon: <EyeIcon className="h-6 w-6 text-cyan-500"/> },
-        { id: 10, text: "Énfasis en el amor y comprensión por los participantes.", icon: <HeartIcon className="h-6 w-6 text-pink-500"/> },
-        { id: 11, text: "Clases virtuales vía Teams (Correo institucional) para seguimiento de entregas.", icon: <VideoCameraIcon className="h-6 w-6 text-blue-700"/> },
-    ];
 
     return (
         <div className="w-full bg-slate-50 min-h-screen font-sans animate-fade-in">
@@ -66,13 +43,13 @@ export function IdentidadMaestro() {
                 <section className="mb-20">
                     <div className="flex items-center gap-3 mb-8">
                         <span className="bg-indigo-100 text-indigo-700 font-bold px-3 py-1 rounded-full text-xs">MULTIMEDIA</span>
-                        <h2 className="text-2xl font-bold text-slate-900">Políticas Educativas</h2>
+                        
                     </div>
 
                     <div className="bg-white p-4 md:p-6 rounded-3xl shadow-xl border border-slate-100">
                         <div className="mb-4 flex items-center gap-2 px-2">
                             <PresentationChartLineIcon className="h-6 w-6 text-indigo-500" />
-                            <h3 className="font-bold text-slate-800">Presentación Interactiva: Políticas Edu</h3>
+                            <h3 className="font-bold text-slate-800">Presentación Interactiva</h3>
                         </div>
                         <div className="w-full relative" style={{ paddingBottom: '56.25%', height: 0 }}>
                             <iframe 
@@ -93,10 +70,7 @@ export function IdentidadMaestro() {
 
                 {/* --- SECCIÓN: EJES TEMÁTICOS --- */}
                 <div className="mb-16">
-                    <div className="flex items-center gap-3 mb-8">
-                        <span className="bg-indigo-100 text-indigo-700 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">Contenidos</span>
-                        <h2 className="text-2xl font-bold text-slate-900">Ejes de Reflexión</h2>
-                    </div>
+                    
 
                     <div className="grid gap-8">
                         
@@ -181,24 +155,7 @@ export function IdentidadMaestro() {
                 </div>
 
                 {/* --- SECCIÓN: ACUERDOS DE CLASE --- */}
-                <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
-                    <div className="text-center mb-10">
-                        <span className="bg-teal-100 text-teal-700 font-bold px-4 py-1.5 rounded-full text-xs tracking-wide uppercase">Normativa</span>
-                        <h2 className="text-3xl font-bold text-slate-900 mt-4">Acuerdos de Clase</h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-6">
-                        {acuerdos.map((acuerdo) => (
-                            <div key={acuerdo.id} className="flex items-start gap-4 group transition-all">
-                                <div className="shrink-0 p-2 bg-slate-50 rounded-lg group-hover:bg-indigo-50 transition-colors">
-                                    {acuerdo.icon}
-                                </div>
-                                <p className="text-sm text-slate-700 font-medium leading-relaxed pt-1">
-                                    {acuerdo.text}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                
 
             </div>
 

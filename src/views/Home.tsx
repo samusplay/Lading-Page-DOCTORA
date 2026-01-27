@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 // npm install @heroicons/react
 import {
-  AcademicCapIcon,
   BookOpenIcon,
   ComputerDesktopIcon,
   CursorArrowRaysIcon,
-  LightBulbIcon,
-  RocketLaunchIcon,
-  UserIcon,
+  UserIcon
 } from "@heroicons/react/24/outline";
 
 export default function HomeView() {
@@ -49,68 +46,16 @@ export default function HomeView() {
               mundo <span className="text-teal-600">digital.</span>
             </h2>
 
-            {/* --- D. INTRODUCCIÓN --- */}
-            <p className="text-lg text-slate-700 mb-10 leading-relaxed max-w-3xl mx-auto font-medium">
-              Soy la <strong>Dra. Angela Maria Vargas Gomez</strong>. Transformo
-              la educación conectando la <strong>identidad del maestro</strong>{" "}
-              con las nuevas realidades tecnológicas. <br />
-            </p>
+            
 
             {/* --- E. CREDENCIALES (CV) --- */}
             <div className="grid md:grid-cols-3 gap-6 text-left mb-12">
-              {/* Card 1 */}
-              <div className="p-5 bg-white rounded-xl border border-blue-100 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-blue-50 text-blue-600 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <AcademicCapIcon className="h-6 w-6" />
-                  </div>
-                  <p className="text-xs text-slate-400 uppercase font-bold">
-                    Formación Base
-                  </p>
-                </div>
-                <h3 className="font-bold text-slate-800 text-lg">
-                  Lic. Ciencias Sociales
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  Universidad Distrital
-                </p>
-              </div>
+              
+          
 
-              {/* Card 2 */}
-              <div className="p-5 bg-white rounded-xl border border-teal-100 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-teal-50 text-teal-600 rounded-lg group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                    <ComputerDesktopIcon className="h-6 w-6" />
-                  </div>
-                  <p className="text-xs text-slate-400 uppercase font-bold">
-                    Especialización
-                  </p>
-                </div>
-                <h3 className="font-bold text-slate-800 text-lg">
-                  Mg. Educación y Tecnología
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  Universidad Distrital
-                </p>
-              </div>
+              
 
-              {/* Card 3 */}
-              <div className="p-5 bg-white rounded-xl border border-indigo-100 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                    <LightBulbIcon className="h-6 w-6" />
-                  </div>
-                  <p className="text-xs text-slate-400 uppercase font-bold">
-                    Máximo Grado
-                  </p>
-                </div>
-                <h3 className="font-bold text-slate-800 text-lg">
-                  Doctora en Educación
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  Universidad Cuauhtémoc
-                </p>
-              </div>
+              
             </div>
 
             {/* --- F. BOTONES DE ACCIÓN --- */}
@@ -156,10 +101,10 @@ export default function HomeView() {
               to="/identidad-maestro"
               className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-2 block"
             >
-              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                 <UserIcon className="h-9 w-9" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600">
+              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-green-600">
                 Identidad del Maestro
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -168,71 +113,57 @@ export default function HomeView() {
             </Link>
 
             {/* Materia 2 */}
-            <div className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2">
-              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                <BookOpenIcon className="h-9 w-9" />
+             <Link
+              to="/historiaEducacion"
+              className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-2 block"
+            >
+              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                <CursorArrowRaysIcon className="h-9 w-9" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600">
-                Historia de la Educación
+              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600">
+                historia de la educación
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Hitos pedagógicos que han moldeado la escuela moderna.
+                hitos pedagogicos desde la antiguedad hasta la actualidad.
               </p>
-            </div>
+            </Link>
+            
 
             {/* Materia 3 */}
-            <div className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 hover:shadow-xl hover:-translate-y-2">
-              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
-                <LightBulbIcon className="h-9 w-9" />
+            <Link
+              to="/tendencias-pedagogicas"
+              className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-2 block"
+            >
+              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-orange-600 mb-6 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
+                <BookOpenIcon className="h-9 w-9" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600">
-                Tendencias Pedagógicas
+              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-orange-600">
+                tendencias pedagogicas
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Metodologías emergentes y Neuroeducación.
+                Metodologias y enfoques actuales en la educación.
               </p>
-            </div>
+            </Link>
 
             {/* Materia 4 */}
-            <div className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-2">
-              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-teal-600 mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+            <Link
+              to="/psicologia-educativa"
+              className="group bg-slate-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-2 block"
+            >
+              <div className="w-16 h-16 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
                 <ComputerDesktopIcon className="h-9 w-9" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600">
-                Aprendizaje Digital
+              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600">
+                Psicologia educativa
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Creación de aulas virtuales en Moodle.
+                Creacion de aulas virtuales moodlle y recursos digitales.
               </p>
-            </div>
+            </Link>
+            
 
             {/* Destacado */}
-            <div className="md:col-span-2 lg:col-span-2 bg-linear-to-br from-blue-700 to-indigo-800 p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden group hover:shadow-blue-900/50 transition-all">
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <RocketLaunchIcon className="h-12 w-12 text-white" />
-                </div>
-                <div className="text-center md:text-left">
-                  <div className="inline-block px-4 py-1 bg-amber-400 text-amber-900 rounded-full text-xs font-extrabold mb-3 tracking-wide">
-                    NUEVO
-                  </div>
-                  <h4 className="text-3xl font-bold mb-3">
-                    Educación con TIC e IA
-                  </h4>
-                  
-                  <p className="text-blue-100 max-w-lg text-lg leading-relaxed">
-                    Inteligencia Artificial aplicada a la educación.
-                  </p>
-                </div>
-                <Link
-                  to="/educacionTic"
-                  className="mt-6 md:mt-0 md:ml-auto px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-white/20 transform hover:-translate-y-1"
-                >
-                  Ver detalles
-                </Link>
-              </div>
-              <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-700"></div>
-            </div>
+           
           </div>
         </div>
       </section>

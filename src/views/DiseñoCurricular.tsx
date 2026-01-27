@@ -1,25 +1,17 @@
 import {
     ArrowLeftIcon,
-    BookOpenIcon,
     BuildingOfficeIcon,
-    ChatBubbleLeftRightIcon,
-    CheckBadgeIcon,
-    ClipboardDocumentCheckIcon,
     ClipboardDocumentListIcon,
-    ComputerDesktopIcon,
-    DocumentCheckIcon,
-    EyeIcon,
     GlobeAmericasIcon,
-    HeartIcon,
     LightBulbIcon,
     PlayCircleIcon // Importado para el botón interactivo
     ,
+
 
     PresentationChartLineIcon,
     PuzzlePieceIcon,
     ScaleIcon,
     SwatchIcon,
-    UserGroupIcon,
     VideoCameraIcon
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
@@ -27,18 +19,7 @@ import { Link } from "react-router-dom";
 export function DiseñoCurricular() {
 
     // DATOS: Acuerdos de Clase
-    const acuerdos = [
-        { id: 1, text: "Registro de asistencia obligatorio en AULAS VIRTUALES.", icon: <ClipboardDocumentCheckIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 2, text: "Lecturas asignadas para posterior evaluación.", icon: <BookOpenIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 3, text: "Entrega de evidencias en AULA VIRTUAL (PDF/Formato asignado).", icon: <DocumentCheckIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 4, text: "Actividades calificadas y publicadas en AULA VIRTUAL.", icon: <CheckBadgeIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 5, text: "Grupo de WhatsApp para recursos (Podcast, Mapas, Jamboard, Miro).", icon: <ChatBubbleLeftRightIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 6, text: "Evaluaciones en formato FORMULARIO de Google.", icon: <ComputerDesktopIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 7, text: "Exposiciones prácticas sobre temáticas inclusivas.", icon: <UserGroupIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 8, text: "Realización de Wikis y grabaciones explicativas.", icon: <VideoCameraIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 9, text: "Notas y resultados compartidos públicamente.", icon: <EyeIcon className="h-5 w-5 text-slate-500"/> },
-        { id: 10, text: "Énfasis en el AMOR y COMPRENSIÓN por los participantes.", icon: <HeartIcon className="h-5 w-5 text-pink-500"/> },
-    ];
+    
 
     return (
         <div className="w-full bg-slate-50 min-h-screen font-sans animate-fade-in">
@@ -210,26 +191,7 @@ export function DiseñoCurricular() {
                     </div>
                 </section>
 
-                {/* 5. ACUERDOS DE CLASE */}
-                <section className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
-                    <div className="text-center mb-10">
-                        <span className="bg-orange-100 text-orange-700 font-bold px-4 py-1.5 rounded-full text-xs tracking-wide uppercase">Compromisos</span>
-                        <h2 className="text-3xl font-bold text-slate-900 mt-4">Acuerdos de Convivencia</h2>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
-                        {acuerdos.map((acuerdo) => (
-                            <div key={acuerdo.id} className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
-                                <div className="shrink-0 mt-0.5">
-                                    {acuerdo.icon}
-                                </div>
-                                <p className="text-sm text-slate-700 leading-snug">
-                                    {acuerdo.text}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                
 
                 {/* CTA FINAL */}
                 <div className="mt-16 text-center">

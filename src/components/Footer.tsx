@@ -30,30 +30,20 @@ export function Footer() {
                         <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Explorar</h3>
                         <ul className="space-y-3 text-sm">
                             <li><a href="#" className="hover:text-blue-400 transition-colors">Inicio</a></li>
-                            <li><a href="#trayectoria" className="hover:text-blue-400 transition-colors">Trayectoria Profesional</a></li>
                             <li><a href="#cursos" className="hover:text-blue-400 transition-colors">Catálogo de Cursos</a></li>
                             <li><a href="#recursos" className="hover:text-blue-400 transition-colors">Recursos Didácticos</a></li>
                         </ul>
                     </div>
 
                     {/* COL 3: Legal & Soporte */}
-                    <div>
-                        <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Información</h3>
-                        <ul className="space-y-3 text-sm">
-                            <li><a href="#" className="hover:text-blue-400 transition-colors">Política de Privacidad</a></li>
-                            <li><a href="#" className="hover:text-blue-400 transition-colors">Términos y Condiciones</a></li>
-                            <li><a href="#" className="hover:text-blue-400 transition-colors">Preguntas Frecuentes</a></li>
-                            <li><a href="#" className="hover:text-blue-400 transition-colors">Soporte Técnico</a></li>
-                        </ul>
-                    </div>
-
+                   
                     {/* COL 4: Contacto Directo */}
                     <div>
                         <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Contacto</h3>
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-start gap-3">
                                 <svg className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                <span>contacto@corazondigital.com</span>
+                                <span>angelamvg78@gmail.com</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <svg className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
